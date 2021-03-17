@@ -22,7 +22,7 @@ export default function Categories() {
   return (
     <div className="categories-container">
       <div className={classes.root}>
-        <List component="nav" aria-label="categories" style={{maxHeight: '81vh', overflow: 'auto'}}>
+        <List component="nav" aria-label="categories" style={{maxHeight: '75vh', overflow: 'auto'}}>
           {
           storageCategories && storageCategories.length > 0 ?
           storageCategories.map(category => (
