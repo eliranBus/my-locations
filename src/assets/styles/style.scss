@@ -38,52 +38,57 @@ html, body, #root, .App {
     display: flex;
     justify-content: center;
     padding-top: 5vw;
-    margin: 0 2em 2em;
+    margin: 0 2em;
+    padding-bottom: 4em;
   }
-  
-  .locations-container {
-    display: flex;
-    justify-content: center;
-    padding: 5vw 0;
-    height: 100%;
 
-    ul {
+  .top-wrapper {
+    text-align: center;
+
+    .locations-container {
       display: flex;
-      flex-wrap: wrap;
-      width: 80%;
       justify-content: center;
-      padding: 0;
-    
-      h3 {
-        border: 1px solid black;
-        box-shadow: 0 8px 17px rgb(0 0 0 / 20%);
-        background-color: white;
-        text-align: center;
-        padding: 1em;
-      }
-      
-      li {
-        flex: 1 0 19%;
-        max-width: 17em;
-        border: 1px solid black;
-        list-style-type: none;
-        margin: 1em;
-        box-shadow: 0 8px 17px rgba(0, 0, 0, 0.2);
-        background-color: white;
-        text-align: center;
-        padding: 1em;
+      padding: 5vw 0;
+      height: 100%;
 
-        h2 {
-          text-decoration: underline;
-        }
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        justify-content: center;
+        padding: 0;
 
-        p {
-          text-align: left;
-        }
-
-        .avatar {
+        h3 {
+          border: 1px solid black;
+          box-shadow: 0 8px 17px rgb(0 0 0 / 20%);
+          background-color: white;
           text-align: center;
-        } 
+          padding: 1em;
+        }
+
+        li {
+          flex: 1 0 19%;
+          max-width: 17em;
+          border: 1px solid black;
+          list-style-type: none;
+          margin: 1em;
+          box-shadow: 0 8px 17px rgba(0, 0, 0, 0.2);
+          background-color: white;
+          text-align: center;
+          padding: 1em;
+
+          h2 {
+            text-decoration: underline;
+          }
+
+          p {
+            text-align: left;
+          }
+
+          .avatar {
+            text-align: center;
+          } 
+        }
       }
     }
   }
@@ -217,6 +222,17 @@ html, body, #root, .App {
 }
 
 @media screen and (max-width: 400px) {
+  html,
+  body,
+  #root,
+  .App {
+    height: initial;
+  }
+
+  .categories-container {
+    padding-bottom: 5em !important;
+  }
+  
   .MuiToolbar-root {
     button:nth-child(4) {
       margin-left: 0;
