@@ -7,7 +7,7 @@ export default function Category() {
   const { category } = useParams();
 
   return (
-    <div>
+    <div className="top-wrapper">
     <div className="locations-container">
       <ul>
         {
