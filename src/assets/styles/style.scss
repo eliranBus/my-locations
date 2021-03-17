@@ -1,0 +1,236 @@
+@font-face {
+  font-family: "Londrina-light";
+  src: url("./assets/fonts/LondrinaSolid-Light.ttf");
+}
+
+@font-face {
+  font-family: "Londrina-thin";
+  src: url("./assets/fonts/LondrinaSolid-Thin.ttf");
+}
+
+@font-face {
+  font-family: "Londrina-regular";
+  src: url("./assets/fonts/LondrinaSolid-Regular.ttf");
+}
+@font-face {
+  font-family: "Londrina-black";
+  src: url("./assets/fonts/LondrinaSolid-Black.ttf");
+}
+
+* {
+  font-family: "Londrina-light";
+}
+
+html, body, #root, .App {
+  min-height: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.02);
+  background-image: url("./assets/images/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+  font-family: "Londrina-light";
+}
+
+.App {
+  text-align: center;
+
+  .categories-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 5vw;
+    margin: 0 2em 2em;
+  }
+  
+  .locations-container {
+    display: flex;
+    justify-content: center;
+    padding: 5vw 0;
+    height: 100%;
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      width: 80%;
+      justify-content: center;
+      padding: 0;
+    
+      h3 {
+        border: 1px solid black;
+        box-shadow: 0 8px 17px rgb(0 0 0 / 20%);
+        background-color: white;
+        text-align: center;
+        padding: 1em;
+      }
+      
+      li {
+        flex: 1 0 19%;
+        max-width: 17em;
+        border: 1px solid black;
+        list-style-type: none;
+        margin: 1em;
+        box-shadow: 0 8px 17px rgba(0, 0, 0, 0.2);
+        background-color: white;
+        text-align: center;
+        padding: 1em;
+
+        h2 {
+          text-decoration: underline;
+        }
+
+        p {
+          text-align: left;
+        }
+
+        .avatar {
+          text-align: center;
+        } 
+      }
+    }
+  }
+
+  .form-container {
+    padding: 15% 0 25%;
+  
+    form {
+      display: flex;
+      justify-content: center;
+      padding: 5em 0;
+  
+      input {
+        padding: 0 0 0 1em;
+        margin-right: 1em;
+        box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+        border: none;
+        border-radius: 5px;
+  
+        &:focus {
+          outline: 1px solid black;
+        }
+      }
+    }
+  }
+
+  .btn-container {
+    padding-bottom: 3em;
+  
+    .back {
+      margin-bottom: 3em;
+    }
+  }  
+}
+
+.MuiSvgIcon-root {
+  fill: red !important;
+}
+
+.MuiList-root {
+  padding: 0 !important;
+  border: 0.5px solid rgba(0, 0, 0, 0.4);
+  box-shadow: 0 9px 28px rgba(0, 0, 0, 0.3);
+}
+
+.MuiToolbar-gutters {
+  display: flex;
+  justify-content: space-between;
+}
+
+.MuiToolbar-root {
+  button {
+    outline: none;
+    transition: all 0.3s ease-in-out;
+
+    &:nth-child(4){
+    margin-left: 2em;
+    }
+
+    &:hover {
+      color: black;
+    }
+  }
+}
+
+.MuiTypography-root {
+  font-family: "Londrina-light" !important;
+}
+
+.MuiTypography-body1 {
+  font-size: 1.2rem !important;
+  padding: 0.7em 0;
+}
+
+.MuiListItem-root.Mui-selected {
+  background-color: #3f51b5 !important;
+  color: white;
+}
+
+.MuiListItem-root.Mui-selected svg {
+  color: white;
+}
+
+.MuiButton-label {
+  svg {
+    fill: white !important;
+    width: 0.6em;
+    height: 0.6em;
+  }
+
+  &:hover {
+    svg {
+      fill: black !important;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .MuiToolbar-regular {
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+  }
+
+  .MuiIconButton-label {
+    font-size: 4.5vw;
+  }
+  
+  .h6.MuiTypography-root {
+    font-size: 3vw;
+  }
+
+  .MuiToolbar-root {
+    .buttons {
+      width: 5em;
+    }
+
+    button {
+      padding: 0.3em;
+    }
+
+    button:nth-child(4) {
+      padding: 1em;
+      width: 4rem;
+      height: 2.5rem;
+   }
+  }
+
+  .MuiButton-label {
+    font-size: 2.5vw; 
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .MuiToolbar-root {
+    button:nth-child(4) {
+      margin-left: 0;
+      width: 2.5rem;
+      height: 1.8rem;
+   }
+
+   .buttons {
+    width: 4em;
+  }
+  } 
+
+  .MuiTypography-h6 {
+    font-size: 4vw !important;
+  }
+}
