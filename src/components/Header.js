@@ -64,8 +64,6 @@ export default function Header() {
 
   const deleteCategory = () => {
     let removedCategory = storageCategories[index].name
-    storageCategories.splice(index, 1);
-    saveLocalStorageCategories(storageCategories);
     swal({
       title: "Are you sure you want to delete this category?",
       text: "Once deleted, you will not be able to recover!",
@@ -79,6 +77,8 @@ export default function Header() {
           icon: "success",
         });
         addToast(`Category "${removedCategory}" successfully removed`, { appearance: 'success' });
+        storageCategories.splice(index, 1);
+        saveLocalStorageCategories(storageCategories);
         setTimeout(() => {
           window.location.assign("/");
         }, 1500);
