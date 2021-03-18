@@ -63,7 +63,7 @@ export default function Header() {
   }
 
   const deleteCategory = () => {
-    let removedCategory = storageCategories[index].name
+    let categoryToRemove = storageCategories[index].name
     swal({
       title: "Are you sure you want to delete this category?",
       text: "Once deleted, you will not be able to recover!",
@@ -73,10 +73,10 @@ export default function Header() {
     })
     .then((willDelete) => {
       if (willDelete) {
-        swal(`Poof! Category "${removedCategory}" has been deleted!`, {
+        swal(`Poof! Category "${categoryToRemove}" has been deleted!`, {
           icon: "success",
         });
-        addToast(`Category "${removedCategory}" successfully removed`, { appearance: 'success' });
+        addToast(`Category "${categoryToRemove}" successfully removed`, { appearance: 'success' });
         storageCategories.splice(index, 1);
         saveLocalStorageCategories(storageCategories);
         setTimeout(() => {
