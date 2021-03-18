@@ -21,7 +21,10 @@
   font-family: "Londrina-light";
 }
 
-html, body, #root, .App {
+html,
+body,
+#root,
+.App {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.02);
   background-image: url("./assets/images/background.png");
@@ -87,7 +90,7 @@ html, body, #root, .App {
 
           .avatar {
             text-align: center;
-          } 
+          }
         }
       }
     }
@@ -95,19 +98,19 @@ html, body, #root, .App {
 
   .form-container {
     padding: 15% 0 25%;
-  
+
     form {
       display: flex;
       justify-content: center;
       padding: 5em 0;
-  
+
       input {
         padding: 0 0 0 1em;
         margin-right: 1em;
         box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
         border: none;
         border-radius: 5px;
-  
+
         &:focus {
           outline: 1px solid black;
         }
@@ -117,11 +120,11 @@ html, body, #root, .App {
 
   .btn-container {
     padding-bottom: 3em;
-  
+
     .back {
       margin-bottom: 3em;
     }
-  }  
+  }
 }
 
 .MuiSvgIcon-root {
@@ -144,8 +147,8 @@ html, body, #root, .App {
     outline: none;
     transition: all 0.3s ease-in-out;
 
-    &:nth-child(4){
-    margin-left: 2em;
+    &:nth-child(4) {
+      margin-left: 2em;
     }
 
     &:hover {
@@ -195,7 +198,7 @@ html, body, #root, .App {
   .MuiIconButton-label {
     font-size: 4.5vw;
   }
-  
+
   .h6.MuiTypography-root {
     font-size: 3vw;
   }
@@ -213,15 +216,15 @@ html, body, #root, .App {
       padding: 1em;
       width: 4rem;
       height: 2.5rem;
-   }
+    }
   }
 
   .MuiButton-label {
-    font-size: 2.5vw; 
+    font-size: 2.5vw;
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   html,
   body,
   #root,
@@ -229,21 +232,32 @@ html, body, #root, .App {
     height: initial;
   }
 
-  .categories-container {
-    padding-bottom: 5em !important;
+  .App {
+    .categories-container {
+      padding-top: 4em;
+      padding-bottom: 6.5em;
+    }
+
+    .top-wrapper .locations-container ul h3 {
+      margin: 7em 0;
+    }
+
+    .form-container {
+      padding: 6em 0;
+    }
   }
-  
+
   .MuiToolbar-root {
     button:nth-child(4) {
       margin-left: 0;
       width: 2.5rem;
       height: 1.8rem;
-   }
+    }
 
-   .buttons {
-    width: 4em;
+    .buttons {
+      width: 4em;
+    }
   }
-  } 
 
   .MuiTypography-h6 {
     font-size: 4vw !important;
