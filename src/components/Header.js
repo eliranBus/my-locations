@@ -63,7 +63,7 @@ export default function Header() {
   }
 
   const deleteCategory = () => {
-    let categoryToRemove = storageCategories[index].name
+    let categoryToRemove = storageCategories[index].name;
     swal({
       title: "Are you sure you want to delete this category?",
       text: "Once deleted, you will not be able to recover!",
